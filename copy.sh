@@ -5,9 +5,11 @@
 # ideally run in root mode
 
 # defining variables:
-dir="/home/$USER/themes"                                                                          # themes directory
-themes="Arc Arc-Dark Arc-Darker Default FlatStudioDark Vertex Vertex-Dark vertex-theme" # themes list
-icons="Breeze-Amber bridge Vertex-Icons"                                                # icons list
+
+echo "Please give the location of the themes directory: "
+read dir                                                                                          # themes directory
+themes="Arc Arc-Dark Arc-Darker Default FlatStudioDark Vertex Vertex-Dark"                        # themes list
+icons="Breeze-Amber bridge vertex-icons-master Vertex-Icons"                                      # icons list
 
 # copies all themes into /usr/share/themes
 echo "Moving themes into the /usr/share/themes directory..."
@@ -23,5 +25,5 @@ done
 ln -s -f $dir/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
 # copies pictures into their locations
-cp -f $dir/Pictures/wallpapers/Ibex.png /usr/share/lightdm/backgrounds/Ibex.png
+# cp -f $dir/Pictures/wallpapers/Ibex.png /usr/share/lightdm/backgrounds/Ibex.png
 ln -s -f $dir/Pictures ~/Pictures
